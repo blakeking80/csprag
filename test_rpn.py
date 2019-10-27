@@ -7,5 +7,10 @@ class TestBasics(unittest.TestCase):
 		rpn.calculate("1")
 		rpn.calculate("+")
 		self.assertEqual(2, rpn.answer())
+	def test_exp(self):
+		rpn.calculate("2")
+		rpn.calculate("2")
+		rpn.calculate("^")
+		self.assertEqual(4, rpn.answer())
 
 

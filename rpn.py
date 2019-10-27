@@ -1,11 +1,15 @@
 #!/usr/bin/env python3
-
+import math
 stack = []
 def calculate(arg):
 	if(arg == '+'):
 		arg2 = stack.pop()
 		arg1 = stack.pop()
 		stack.append(int(arg2) +int(arg1))
+	elif(arg == "^"):
+		arg2 = stack.pop()
+		arg1 = stack.pop()
+		stack.append(pow(int(arg1),int(arg2)))	
 	else:
 		stack.append(arg)
 	print(stack)
